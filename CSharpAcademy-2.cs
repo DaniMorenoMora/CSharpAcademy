@@ -1,18 +1,7 @@
-//Ejercicio 1: Constantes literales
+string firstName = "Bob";
+int numeroEntero = 3;
+float numeroDecimal = 34.4f;
 
-Console.WriteLine("Hello world!");
-Console.WriteLine('b');
-Console.WriteLine(123);
-Console.WriteLine(1.25F);
-Console.WriteLine(2.625);
-Console.WriteLine(12.39816m);
-Console.WriteLine(true);
-Console.WriteLine(false);
-
-//Ejercicio 2: Variables
-
-string firstName;
-firstName = "Bob";
-Console.WriteLine(firstName);
-string lastName = "Dylan"; 
-Console.WriteLine(lastName);
+Console.Write("Hello, " + firstName + "! "
+ + "You have " + numeroEntero + " messages in your inbox."
+ + "The temperature is " + numeroDecimal + " celsius.");
