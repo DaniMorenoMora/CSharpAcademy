@@ -11,6 +11,8 @@ int version = 11;
 string updateText = "Update to Windows";
 Console.WriteLine($"{updateText} {version}!");
 
+
+//Desafio 1 - Usar solo 2 veces el Console.WriteLine
 string projectName = "ACME";
 string message = "Ver el resultado";
 string russianMessage ="Ver el resultado en ruso";
