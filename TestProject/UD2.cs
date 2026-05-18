@@ -1,41 +1,38 @@
+Random random = new Random();
+int daysUntilExpiration = random.Next(12);
+int discountPercentage = 0;
 
-
-int roll1 = 6;
-int roll2 = 6;
-int roll3 = 6;
-
-int total = roll1 + roll2 + roll3;
-
-Console.WriteLine($"Tirada: {roll1} + {roll2} + {roll3} = {total}");
-
-if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
+if (daysUntilExpiration <=1)
 {
-    if ((roll1 == roll2) && (roll2 == roll3))
-    {    
-        Console.WriteLine("¡Has sacado triples! +6 de bonificación al total!");
-        total += 6; 
-    }
-
-    else
-    {
-        Console.WriteLine("¡Has sacado dobles! +2 de bonificación al total!");
-    total += 2;
-    }
+    discountPercentage =20;
 }
-
-if (total >= 16)
+else if (daysUntilExpiration <=5)
 {
-    Console.WriteLine($"Has sacado {total} ¡Has ganado un vehículo nuevo, yo ya no te veo en otro coche macho!");
+    discountPercentage =10;
 }
-    else if (total >= 10)
-    {
-        Console.WriteLine ($"Has sacado {total} ¡Ganaste un portatil Lenovo guapisimo!");
-    }
-    else if (total >= 7)
-    {
-        Console.WriteLine($"Has sacado {total} ¡Ganaste un viaje a Kenia (Alicante)");
-    }
 else
 {
-    Console.WriteLine($"Has sacado {total} ¡Has ganado un gatito gordito!");
+    discountPercentage =0;
+}
+
+
+if (daysUntilExpiration <=0)
+{
+    Console.WriteLine("Su suscripción ha expirado");
+}
+else if (daysUntilExpiration <=1)
+{
+    Console.WriteLine($"¡Su suscripción expira mañana! Renueve ahora para obtener un {discountPercentage}% de descuento!");
+}
+else if (daysUntilExpiration <=5)
+{
+    Console.WriteLine($"En {daysUntilExpiration} dias caducará su suscripción. Renueve ahora para obtener un {discountPercentage}% de descuento!");
+}
+else if (daysUntilExpiration <=10)
+{
+    Console.WriteLine($"Tu suscripción expira en {daysUntilExpiration} dias. ¡Renueve su suscripción ahora!");
+}
+else
+{
+    Console.WriteLine("");
 }
