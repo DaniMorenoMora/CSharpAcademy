@@ -6,15 +6,20 @@ int roll3 = dice.Next(1, 7);
 
 int total = roll1 + roll2 + roll3;
 
+Console.WriteLine($"Tirada: {roll1} + {roll2} + {roll3} = {total}");
 
-Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
-
-if (total > 14)
+if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
 {
-    Console.WriteLine("You win!");
+    Console.WriteLine("¡Has sacado dobles! +2 de bonificación al total!");
+    total += 2;
+}
+
+if (total >= 15)
+{
+    Console.WriteLine($"Has sacado {total} ¡Ganaste!");
 }
 
 if (total < 15)
 {
-    Console.WriteLine("Sorry, you lose.");
+    Console.WriteLine($"Has sacado {total} Lo siento, perdiste.");
 }
