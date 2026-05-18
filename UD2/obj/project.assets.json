@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\daniel.moreno\\Desktop\\Repositorios\\CSharpAcademy\\TestProject\\TestProject.csproj",
+      "projectUniqueName": "c:\\Users\\daniel.moreno\\Desktop\\Repositorios\\CSharpAcademy\\UD2\\TestProject.csproj",
       "projectName": "TestProject",
-      "projectPath": "C:\\Users\\daniel.moreno\\Desktop\\Repositorios\\CSharpAcademy\\TestProject\\TestProject.csproj",
+      "projectPath": "c:\\Users\\daniel.moreno\\Desktop\\Repositorios\\CSharpAcademy\\UD2\\TestProject.csproj",
       "packagesPath": "C:\\Users\\daniel.moreno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\daniel.moreno\\Desktop\\Repositorios\\CSharpAcademy\\TestProject\\obj\\",
+      "outputPath": "c:\\Users\\daniel.moreno\\Desktop\\Repositorios\\CSharpAcademy\\UD2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
