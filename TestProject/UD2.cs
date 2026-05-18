@@ -16,11 +16,11 @@ else
 }
 
 
-if (daysUntilExpiration <=0)
+if (daysUntilExpiration ==0)
 {
     Console.WriteLine("Su suscripción ha expirado");
 }
-else if (daysUntilExpiration <=1)
+else if (daysUntilExpiration ==1)
 {
     Console.WriteLine($"¡Su suscripción expira mañana! Renueve ahora para obtener un {discountPercentage}% de descuento!");
 }
