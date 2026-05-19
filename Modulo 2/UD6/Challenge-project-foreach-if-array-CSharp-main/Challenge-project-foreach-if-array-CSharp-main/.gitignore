@@ -1,0 +1,21 @@
+# Build results
+bin/
+obj/
+.Net8Projects
+Final/
+LICENSE
+README.md
+
+# Visual Studio cache/options
+.vs/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln
+
+# Build outputs
+*.dll
+*.exe
+*.pdb
