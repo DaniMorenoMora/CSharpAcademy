@@ -42,65 +42,93 @@ do
  Console.WriteLine (heroCurrentHealth > monsterCurrentHealth ? "Hero wins!" : "Monster wins!");*/
 
 
-
-/* Primer ejercicio 
-
-string? readResult;
+/*string? readResult;
 string valueEntered = "";
 int numericValue = 0;
 bool validNumber = false;
 
-Console.WriteLine("Enter a int between 5 and 10:");
+Console.WriteLine("Enter a number between 5 and 10");
+
+
 do
 {
     readResult = Console.ReadLine();
-    if (readResult !=null)
+
+    // Si el resultado es del tipo correcto, seguimos el código
+    if (readResult != null) 
     {
         valueEntered = readResult;
     }
 
-    validNumber = int.TryParse(valueEntered, out numericValue);
+    // Si no lo es, intentamos leer el número entero
+    validNumber = int.TryParse(readResult, out numericValue);
 
     if (validNumber == true)
     {
-        if (numericValue <= 5 || numericValue >= 10)
+        //Si no cumple con estas caracteristicas, validNumber vuelve a ser false
+       if (numericValue < 5 || numericValue > 10)
         {
             validNumber = false;
-            Console.WriteLine("Error, the number must be between 5 and 10");
+            Console.WriteLine("Please, enter a valid number (between 5 and 10)");
         }
     }
     else
     {
-        Console.WriteLine($"You entered a invalid number, try again");
+        Console.WriteLine("Please, enter a number, please try again");
     }
 } while (validNumber == false);
 
-Console.WriteLine($"Your input value ({numericValue}) has been accepted."); */
+Console.WriteLine($"Congratulations! {numericValue} is valid");*/
 
-/* Segundo ejercicio 
+/*string? readResult;
+string userRole = "";
+bool validResult = false;
 
-string roleName = "";
-string? readResult;
-bool validEntry = false;
-Console.WriteLine("Enter a role (admin, manager or user):");
+Console.WriteLine("Enter a valid role (Admin, Manager or User)");
 
 do
 {
     readResult = Console.ReadLine();
+    userRole = readResult.Trim().ToLower();
 
-    if (readResult != null)
+    if (userRole == "admin" || userRole == "manager" || userRole == "user")
     {
-        roleName = readResult.Trim().ToLower();
-    }
-    if (roleName == "admin" || roleName == "manager" || roleName == "user")
-    {
-        validEntry = true;
+        validResult = true;
     }
     else
     {
-        Console.WriteLine($"The role you entered ({roleName}) is not valid. Please, try again");
+        Console.WriteLine("Invalid role. Please, try again");
     }
-} while (validEntry == false);
+} while (!validResult);
 
-Console.WriteLine($"Welcome {roleName}");*/
+Console.WriteLine($"Welcome {userRole}");*/
+
+string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", 
+                                    "I like all three of the menu choices" };
+int stringsCount = myStrings.Length; // La da de valor 2
+
+int periodLocation = 0;
+string myString = "";
+
+for (int i = 0; i < stringsCount; i++)
+{
+    myString = myStrings[i];
+    //Localiza el "." dentro del string indicado y devuelve su posición
+    periodLocation = myString.IndexOf(".");
+
+    string mySentence;
+
+    while (periodLocation != -1) // Se repite el loop hasta que no detecte ningun "."
+    {
+        mySentence = myString.Remove(periodLocation); //Borra desde el punto encontrado hasta el final
+        myString = myString.Substring(periodLocation + 1); //Crea un nuevo string empezando desde el punto + 1 posición
+        myString = myString.TrimStart(); //Elimina los espacios del principio del string
+        periodLocation = myString.IndexOf("."); // Cambia el periodLocation Busca el siguiente punto del string generado y vuelve a ejecutar el bucle
+
+        Console.WriteLine(mySentence); // Devuelve el string generado en consola
+    }
+
+    mySentence = myString.Trim(); // Limpia los espacios innecesarios
+    Console.WriteLine(mySentence); // Devuelve en consola la última linea 
+}
 
